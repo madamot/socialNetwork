@@ -56,7 +56,7 @@
         $th = $max / $w * $h;
         $tw = $max;
       }
-      elseif (condition) {
+      elseif ($h > $w && $max < $h) {
         $tw = $max / $h * $w;
         $th = $max;
       }
