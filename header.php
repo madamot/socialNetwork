@@ -26,7 +26,7 @@
          "<li><a href='friends.php'>Friends</a></li>" .
          "<li><a href='messages.php'>Messages</a></li>" .
          "<li><a href='profile.php'>Edit Profile</a></li>" .
-         "<li><a href='logout.php?'>Log Out</a></li></ul><br>";
+         "<li><a href='logout.php'>Log Out</a></li></ul><br>";
   }
   else {
     echo "<br>
