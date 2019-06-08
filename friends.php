@@ -29,12 +29,20 @@
   $followers = array();
   $following = array();
 
-  $result = queryMysql("SELECT * FROM friends WHERE friends='$view'");
+  $result = queryMysql("SELECT * FROM friends WHERE user='$view'");
   $num = $result->num_rows;
 
   for ($j=0; $j < $num ; $j++) {
     $row = $result->fetch_array(MYSQLI_ASSOC);
-    $following[$j] = $row['user'];
+    $followers[$j] = $row['friend'];
+  }
+
+  $result = queryMysql("SELECT * FROM friends WHERE friend='$view'");
+  $num = $result->num_rows;
+
+  for ($j=0; $j < $num ; $j++) {
+    $row = $result->fetch_array(MYSQLI_ASSOC);
+    $followers[$j] = $row['user'];
   }
 
   $mutual = array_intersect($followers, $following);
