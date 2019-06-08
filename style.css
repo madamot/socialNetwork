@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'Gingham';
-  src: url(../fonts/Gingham/Gingham.woff2);
+  src: url(fonts/Gingham/Gingham.woff2);
 }
 
 * {
@@ -17,8 +17,8 @@
 
 body {
   width: 100vw;
-  margin: 10px 50px;
   background-color: #f8f8f8;
+  margin: 0;
 }
 
 img {
